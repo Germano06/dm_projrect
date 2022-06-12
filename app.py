@@ -1,7 +1,10 @@
+from importlib import import_module
 from flask import Flask, render_template, request
 import cv2
 import numpy as np
 from matplotlib import pyplot as plt
+import imutils
+from pickle import load
 import easyocr
 
 app = Flask(__name__)
@@ -16,6 +19,7 @@ def hello_world():
 
 @app.route('/', methods=['POST'])
 def predict():
+
     imagefile = request.files['imagefile']
     imagepath = "./images/" + imagefile.filename
     imagefile.save(imagepath)
@@ -34,4 +38,5 @@ def predict():
 
 
 if __name__ == '__main__':
+
     app.run(debug=True)
