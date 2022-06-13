@@ -1,0 +1,19 @@
+#b{
+    background-color: #d8e8e4;
+}
+.navbar-custom{
+    background-color: #080e2c;
+    text-align: center;
+}
+nav a, nav a .navbar-brand{
+
+    text-align: center;
+    color:#f3fdfb;
+}
+.container{
+    margin:10px;
+    padding:20px;
+}
+#button{
+    background-color: #44e2cb;
+}
